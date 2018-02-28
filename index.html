@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ninja to Cat &amp; Back!</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('img').hover(
+
+                function() {
+                    swapper($(this));
+                },
+
+                function() {
+                    swapper($(this));
+                }
+
+            );
+            function swapper(swapthis)
+            {
+                var swapImage = swapthis.attr("src");
+                swapthis.attr("src",swapthis.attr("data-alt-src"));
+                swapthis.attr("data-alt-src",swapImage);
+            };
+        });
+    </script>
+</head>
+<body>
+    <img src="img/tori-1976609_960_720%20Cropped.jpg" data-alt-src="img/animal-2564182_960_720 Cropped.png" alt="tori">
+    <img src="img/shuriken-153172_960_720%20Cropped.png" data-alt-src="img/animal-2564182_960_720 Cropped.png" alt="shuriken">
+    <img src="img/ninja-2108803_960_720%20Cropped.png" data-alt-src="img/animal-2564182_960_720 Cropped.png" alt="ninja1">
+    <img src="img/ninja-1297215_960_720%20Cropped.png" data-alt-src="img/animal-2564182_960_720 Cropped.png" alt="ninja2">
+</body>
+</html>
